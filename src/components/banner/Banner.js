@@ -1,3 +1,5 @@
+import './banner.scss'
+
 function Banner() {
     return <h1>Kasa</h1>
 }
