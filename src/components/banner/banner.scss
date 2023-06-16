@@ -1,0 +1,23 @@
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    background-color: #FFFFFF;
+}
+
+.banner-falaises{
+    border-radius: 25px;
+    height: 223px;
+    mix-blend-mode: darken;
+    opacity: 0.3;   
+}
+
+.kasa-title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 68.45px;
+    color: #FFFFFF;
+}
