@@ -2,9 +2,11 @@ import Home from './pages/home/Home';
 import NotFound from './pages/notFound/NotFound';
 import About from './pages/about/About';
 import Accomodation from './pages/accomodation/Accomodation';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserHistory, RouterProvider } from 'history';
 
-const router = createBrowserRouter([
+const history = createBrowserHistory();
+
+const router = createRouter([
 	{
 		path: "/Kasa/",
 		element: <Home />
@@ -18,17 +20,18 @@ const router = createBrowserRouter([
 		element: <About />
 	},
 	{
-		path: "*",
-		element: <NotFound />
+		path: "/",
+		element: <NotFound />,
+    	errorElement: <ErrorPage />
 	},
-]);
+], { history });
 
 function App() {
-	return (
-		<>
-			<RouterProvider router={router}/>
-		</>
-	);
+  return (
+    <main>
+      <RouterProvider router={router} />
+    </main>
+  );
 }
 
 export default App;
