@@ -1,18 +1,19 @@
 import logo from '..assets/logorouge.png'
 import './navbar.scss'
 
-function NavBar() {
+import { Link } from 'react-router-dom'
+ 
+function Navbar() {
     return (
-    <div className='homeMenu'>
-        <div className='navLogo'>
-        <img src={logo} alt='Kasa' className='kasa-logo' />
-        </div>
-        <div className='navbar'>
-            <ul>Accueil</ul>
-            <ul>A propos</ul>
-        </div>
-    </div>
+        <nav className='homeMenu'>
+            <div className='navLogo'>
+            <img src={logo} alt='Kasa' className='kasa-logo' />
+            </div>
+            <Link to="/">Accueil</Link>
+            <Link to="/survey">Questionnaire</Link>
+        </nav>
     )
 }
 
-export default NavBar
+export default Navbar
+

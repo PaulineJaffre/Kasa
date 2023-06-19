@@ -2,36 +2,22 @@ import Home from './pages/home/Home';
 import NotFound from './pages/notFound/NotFound';
 import About from './pages/about/About';
 import Accomodation from './pages/accomodation/Accomodation';
-import { createBrowserHistory, RouterProvider } from 'history';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-const history = createBrowserHistory();
 
-const router = createRouter([
-	{
-		path: "/Kasa/",
-		element: <Home />
-	},
-	{
-		path: "/accomodation/:id",
-		element: <Accomodation />
-	},
-	{
-		path: '/about',
-		element: <About />
-	},
-	{
-		path: "/",
-		element: <NotFound />,
-    	errorElement: <ErrorPage />
-	},
-], { history });
+ReactDOM.render(
+    <React.StrictMode>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+				<Route path="/notfound" element={<NotFound />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/accomodation" element={<Accomodation />} />
+            </Routes>
+        </Router>
+    </React.StrictMode>,
+document.getElementById('root')
+)
 
-function App() {
-  return (
-    <main>
-      <RouterProvider router={router} />
-    </main>
-  );
-}
-
-export default App;

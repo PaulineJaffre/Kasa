@@ -619,3 +619,17 @@ const datas = [
 ]
 
 export default datas;
+
+function AccomodationDatas() {
+    return (
+        <div>
+            {datas.map((accomodation, index) => (
+                <Card
+                    key={`${accomodation.id}-${index}`}
+                    picture={accomodation.pictures}
+                    title={accomodation.title}
+                />
+            ))}
+        </div>
+    )
+}
