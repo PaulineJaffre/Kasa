@@ -1,4 +1,4 @@
-import logo from '..assets/logonoir.png'
+import logo from './assets/logonoir';
 import './footer.scss'
 
 function Footer() {
