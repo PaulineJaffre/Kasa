@@ -1,20 +1,18 @@
-import './card.scss'
 import PropTypes from 'prop-types'
 
-
-function Card({ title, picture }) {
+function Card(props) {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', padding: 15 }}>
-            <img src={picture} alt="accomodation" height={80} width={80} />
-            <span>{title}</span>
-        </div>
+        <a href={`/accomodation/${props.id}`} className="card">
+            <img src={props.cover} alt="accomodation" height={80} width={80} />
+            <span>{props.title}</span>
+        </a>
     )
 }
- 
 
 Card.propTypes = {
+    id: PropTypes.string,
     title: PropTypes.string.isRequired,
-    picture: PropTypes.string,
+    cover: PropTypes.string,
 }
 
 export default Card
