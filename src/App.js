@@ -3,9 +3,8 @@ import Error from './pages/notFound/NotFound';
 import About from './pages/about/About';
 import Accomodation from './pages/accomodation/Accomodation';
 import './sass/App.scss';
-//import React from 'react'
-//import ReactDOM from 'react-dom'
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Nav from './components/navbar/NavBar';
+import Footer from './components/footer/Footer';
 import { Routes, Route } from "react-router-dom";
 
 
@@ -28,19 +27,6 @@ function App() {
   
   export default App;
 
-/*ReactDOM.render(
-    <React.StrictMode>
-        <Router>
-            <Routes>
-                <Route path="/home" element={<Home />} />
-				<Route path="/notfound" element={<NotFound />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/accomodation" element={<Accomodation />} />
-            </Routes>
-        </Router>
-    </React.StrictMode>,
-document.getElementById('root')
-)*/
 
 
 
