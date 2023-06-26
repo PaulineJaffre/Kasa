@@ -1,5 +1,5 @@
 import logo from 'src/assets/logorouge.png'
-import './navbar.scss'
+import 'src/components/navbar/navbar.scss'
 
 import { Link } from 'react-router-dom'
  

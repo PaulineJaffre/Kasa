@@ -1,5 +1,5 @@
-import falaises from '../assets/Falaises.png'
-import './banner.scss'
+import falaises from 'src/assets/Falaises.png'
+import 'src/components/banner/banner.scss'
 
 function Banner() {
     const title = 'Chez vous, partout et ailleurs'

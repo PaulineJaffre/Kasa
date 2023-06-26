@@ -1,8 +1,8 @@
-import './home.scss'
-import Banner from '../components/banner/Banner';
-import Card from '../components/card/Card';
-import imageBannerHome from '../assets/banner-falaises'
-import accomodations from '../datas.json';
+import 'src/pages/home/home.scss'
+import Banner from 'src/components/banner/Banner';
+import Card from 'src/components/card/Card';
+import imageBannerHome from 'src/assets/banner-falaises.png'
+import accomodations from 'src/data/data.json';
 
 
 function Home() {
