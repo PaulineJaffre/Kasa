@@ -1,0 +1,31 @@
+.container-collapses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.collapse {
+    background-color: #FF6060;
+    color: white;
+    border-radius: 5px;
+    width: 70%;
+    line-height: 0.5em;
+    margin: 20px;
+    padding: 0 10px 0 10px;
+}
+
+.arrow {
+    height: 10px;
+    width: 20px;
+}
+
+.titreCollapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descriptionCollapse {
+    display: block;
+    line-height: 1em;;
+}

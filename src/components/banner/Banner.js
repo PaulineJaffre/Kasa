@@ -1,14 +1,23 @@
-import falaises from 'src/assets/Falaises.png'
 import 'src/components/banner/banner.scss'
-
-function Banner() {
-    const title = 'Chez vous, partout et ailleurs'
+import PropTypes from 'prop-types'
+function Banner(props) {
     return (
-    <div className='banner'>
-        <img src={falaises} alt='photo falaises' className='banner-falaises' />
-		<h1 className='kasa-title'>{title}</h1>
-    </div>
-    )
+      <section className="banner">
+        <div className={props.banner}>
+          <img className={props.imageClassName} src={props.image} alt={props.imageAlt} />
+          <h2>{props.title}</h2>
+        </div>
+      </section>
+    );
+  }
+  
+
+  Banner.propTypes = {
+    imageClassName: PropTypes.string,
+    image: PropTypes.string.isRequired,
+    imageAlt: PropTypes.string,
+    banner: PropTypes.string,
+    title: PropTypes.string,
 }
 
-export default Banner
+  export default Banner;

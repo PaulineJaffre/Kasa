@@ -4,7 +4,9 @@ import About from './pages/about/About';
 import Accomodation from './pages/accomodation/Accomodation';
 import './sass/App.scss';
 import Nav from './components/navbar/NavBar';
+import './components/navbar/navbar.scss';
 import Footer from './components/footer/Footer';
+import './components/footer/footer.scss';
 import { Routes, Route } from "react-router-dom";
 
 

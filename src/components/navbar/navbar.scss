@@ -1,20 +1,27 @@
 .navigation{
     padding: 20px;
     display: flex;
-    justify-content: center;
+    width: 90%;
+    text-decoration: none;
+    justify-content: space-between;
 }
 
 .navLogo{
     align-items: flex-start;
 }
 
-.navbar{
-    color:#FF6060;
+
+.navbar ul {
+    display: flex;
+    color: #FF6060;
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 500;
     line-height: 34px;
-    letter-spacing: 0em;
-    text-align: right;
 }
 
+.navbar li {
+    padding-left: 20px;
+    list-style-type: none;
+    text-decoration: none;
+}
