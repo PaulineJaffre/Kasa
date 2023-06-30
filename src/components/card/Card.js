@@ -5,7 +5,7 @@ function Card(props) {
     return (
         <a href={`/accomodation/${props.id}`} className="card">
             <img src={props.cover} alt="accomodation"/>
-            <span>{props.title}</span>
+            <span className='cardTitle'>{props.title}</span>
         </a>
     )
 }

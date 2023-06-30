@@ -1,10 +1,19 @@
 import './accomodation.scss'
-
-function Accomodation(){
-    <div>
-        <h1>Accomodation</h1>
-    </div>
-}
+import Gallery from 'src/components/gallery/Gallery'
+import accomodations from 'src/data/data.json';
 
 
-export default Accomodation
+export default function Accomodation(){
+    return (
+      <div className="accomodation">
+        {accomodations.map((accomodation)=> (
+        <Gallery 
+        key={accomodation.id} 
+        id={accomodation.id} 
+        title={accomodation.title} 
+        cover={accomodation.cover} 
+        />
+        ))}
+        </div>
+    )
+  }

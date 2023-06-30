@@ -1,7 +1,6 @@
 .navigation{
     padding: 20px;
     display: flex;
-    width: 90%;
     text-decoration: none;
     justify-content: space-between;
 }
@@ -13,15 +12,15 @@
 
 .navbar ul {
     display: flex;
-    color: #FF6060;
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 500;
     line-height: 34px;
+    list-style-type: none;
 }
 
-.navbar li {
-    padding-left: 20px;
-    list-style-type: none;
+.navLink {
+    padding-left: 50px;
     text-decoration: none;
+    color: #FF6060;
 }
