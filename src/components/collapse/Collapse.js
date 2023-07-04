@@ -14,7 +14,7 @@ const Collapse = ({ title, description }) => { //Cette ligne définit une foncti
       <div className="collapse">
         <div className='titreCollapse' onClick={toggleCollapse}>
             <h2>{title}</h2> 
-            <img className='arrow' src={Arrow} alt=""></img>
+            <img className={`arrow ${isOpen ? 'arrow--open' : ''}`} src={Arrow} alt=""></img> 
         </div>
         {isOpen && <p className='descriptionCollapse'>{description}</p>} 
         
@@ -32,4 +32,4 @@ Collapse.propTypes = {
     description: PropTypes.string,
 }
 
-    
+    // Pas open, la classe arrow ne change pas, si collapse open, changer la classe arrow pour pas arrow et donc changer sens fleche

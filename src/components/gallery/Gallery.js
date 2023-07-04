@@ -1,20 +1,51 @@
 import './gallery.scss'
-
+//import { useState } from "react"
 import PropTypes from 'prop-types'
 
 function Gallery(props) {
     return (
-        <a href={`/accomodation/${props.id}`} className="card">
-            <img src={props.cover} alt="accomodation"/>
-            <span className='cardTitle'>{props.title}</span>
-        </a>
+        <div>
+            <section className='accoTitle'>
+                <h2>{props.title}</h2>
+            </section>
+
+            <section className='accoHost'>
+                <p>{props.host}</p>
+                <img className={props.imageClassName} src={props.image} alt={props.imageAlt} />
+            </section>
+
+            <section className='accoLocation'>
+                <p>{props.location}</p>
+            </section>
+
+
+            <section className='accoTags'>
+                <ul>
+                    <li>{props.tags}</li>
+                    <li>{props.tags}</li>
+                    <li>{props.tags}</li>
+                </ul>
+            </section>
+
+            <section className='accoRating'>
+                <p>Ratings to do</p>
+            </section>
+
+        </div>
     )
 }
 
-Gallery.propTypes = {
-    id: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    cover: PropTypes.string,
+
+
+
+  Gallery.propTypes = {
+    imageClassName: PropTypes.string,
+    image: PropTypes.string.isRequired,
+    imageAlt: PropTypes.string,
+    title: PropTypes.string,
+    host: PropTypes.string,
+    location: PropTypes.string,
+    tags: PropTypes.string,
 }
 
 export default Gallery
