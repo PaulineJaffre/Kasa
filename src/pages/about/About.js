@@ -10,7 +10,7 @@ export default function About(){
         <Banner image = { imgBannerAbout } imageClassName="about-banner-image" banner ="about-banner" imageAlt ="paysage montagne" />
         <section className='container-collapses'>
           {collapseData.map((data)=> (
-            <Collapse key={data.id} id ={data.id} title={data.title} description ={data.description} />
+            <Collapse key={data.id} id ={data.id} title={data.title} content ={data.description} />
           ))}
         </section>
     </div>

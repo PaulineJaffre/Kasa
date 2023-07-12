@@ -1,22 +1,23 @@
-.container-collapses {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 .collapse {
     background-color: #FF6060;
     color: white;
     border-radius: 5px;
-    width: 70%;
-    line-height: 1em;
-    margin: 20px;
-    padding: 0 10px 0 10px;
+    //width: 70%;
+    line-height: 0;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+
+.collapse img {
+    cursor: pointer;
 }
 
 .arrow {
     height: 10px;
     width: 20px;
+    transition: 0.8s ease-in-out ;
 }
 
 .titreCollapse {
@@ -27,9 +28,57 @@
 
 .descriptionCollapse {
     display: block;
-    line-height: 1em;;
+    line-height: 1.5em;
+}
+
+.descriptionCollapse_hidden {
+    opacity: 0%;
 }
 
 .arrow--open {
     transform: rotate(180deg);
+    transition: 0.8s ease-in-out;
   }
+
+  @keyframes opacity {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+@media screen and (min-width: 768px)and (max-width: 900px){
+     
+}
+
+@media screen and (max-width: 768px){
+    .descriptionCollapse_hidden {
+        opacity: 0%;
+        height: 20px;    
+    }
+    .collapse img {
+        cursor: pointer;
+    }
+    .descriptionCollapse {
+        animation: opacity 1.2s;
+        padding: 5% 3% 10% 3%;
+        line-height: 22px;
+        font-size: 14px;
+        border-radius: 0px 0px 10px 10px;
+        margin-bottom: 3%;
+    }
+    .titreCollapse {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FF6060;
+        color: white;
+        padding: 2.5%;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+
+}
