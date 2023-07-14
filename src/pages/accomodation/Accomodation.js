@@ -11,10 +11,10 @@ import StarGrey from "src/assets/starGrey.png"
 
 export default function Accomodation() {
 
-  const { id } = useParams();	 //récupérer l'ID de l'hébergement à partir de l'URL
+	const { id } = useParams();	 //récupérer l'ID de l'hébergement à partir de l'URL
 
 	const [imageSlider, setImageSlider] = useState([]); //déclare une variable d'état imageSlider qui sera utilisée pour stocker les images de la galerie.
-  const dataCurrentAccomodations = datas.filter(data => data.id === id); //filtre les données d'hébergement datas pour trouver l'hébergement correspondant à l'ID spécifié. Les données de cet hébergement sont stockées dans la variable dataCurrentAccomodations.
+	const dataCurrentAccomodations = datas.filter(data => data.id === id); //filtre les données d'hébergement datas pour trouver l'hébergement correspondant à l'ID spécifié. Les données de cet hébergement sont stockées dans la variable dataCurrentAccomodations.
 	
 	useEffect(() => {
 		const dataCurrentAccomodations = datas.filter(data => data.id === id);
