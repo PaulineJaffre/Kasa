@@ -24,3 +24,51 @@
     line-height: 68.45px;
     margin: 0;
 }
+
+@media screen and (min-width: 768px) and (max-width: 980px){
+    .banner{
+        height: auto;
+        padding: 0; 
+    }
+    
+    .banner img{
+        width: 95vw;
+        height: auto;
+        
+    }
+    .banner h2  {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+}
+    
+@media screen and (max-width: 768px){
+    .banner{
+        height: 100px; 
+        margin-bottom: 150px; 
+    }
+    
+    .banner img{
+        position: relative;
+        border-radius: 15px;
+        max-width: 95vw; 
+        object-fit: cover;  
+        
+    }
+    
+    .banner h2 {
+        top: 100%;
+        left: 40%;
+        font-size: 1.8em;
+        font-weight: 500;
+        color: white;
+        width: 70%;
+        text-align: left;
+        line-height: normal;
+    }
+}

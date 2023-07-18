@@ -44,5 +44,12 @@
 }
 
 @media screen and (max-width: 768px){
+    .card {
+        width: 100%;
+        margin: 10px;
+    }
 
+    .card img {
+        width: 100%;
+    }
 }

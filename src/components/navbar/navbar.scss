@@ -24,3 +24,44 @@
     text-decoration: none;
     color: #FF6060;
 }
+
+@media screen and (min-width: 768px) and (max-width: 980px){
+
+    .navLogo{
+        width: 30vw;
+    }
+
+    .navbar li {
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .navigation{
+        justify-content: space-around;
+    }
+
+    .kasa-logo{
+        width: 30vw;
+    }
+
+    .navbar ul {
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    .navLink {
+        padding-left: 0;
+    }
+
+    .navbar ul{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 34px;  
+    }
+
+    .navbar li{
+        width: 30vw;
+    }
+}

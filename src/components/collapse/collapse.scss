@@ -3,9 +3,7 @@
     background-color: #FF6060;
     color: white;
     border-radius: 5px;
-    //width: 70%;
     line-height: 0;
-    margin: 20px 0;
     padding: 10px 10px 0 10px;
 }
 
@@ -52,9 +50,18 @@
 
 @media screen and (min-width: 768px)and (max-width: 900px){
      
+    .container-collapses {
+        margin: 20px;
+    }
 }
 
 @media screen and (max-width: 768px){
+
+
+    .container-collapses {
+        margin: 5px;
+    }
+
     .descriptionCollapse_hidden {
         opacity: 0%;
         height: 20px;    
@@ -68,8 +75,8 @@
         line-height: 22px;
         font-size: 14px;
         border-radius: 0px 0px 10px 10px;
-        margin-bottom: 3%;
     }
+
     .titreCollapse {
         display: flex;
         align-items: center;
@@ -77,9 +84,6 @@
         background-color: #FF6060;
         color: white;
         padding: 2.5%;
-        font-weight: 500;
-        font-size: 16px;
-        border-radius: 5px;
     }
 
 
