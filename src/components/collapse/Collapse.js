@@ -16,14 +16,15 @@ const Collapse = ({ title, content }) => { //Cette ligne définit une fonction f
             <h2>{title}</h2> 
             <img className={`arrow ${isOpen ? 'arrow--open' : ''}`} src={Arrow} alt=""></img> 
         </div>
-        <div className={isOpen ? 'descriptionCollapse' : 'descriptionCollapse_hidden'}>
+        
+        <ul className={isOpen ? 'descriptionCollapse' : 'descriptionCollapse_hidden'}>
           {Array.isArray(content) ? content.map((item, index) => {
             return (
-              <p key={index}>{item}</p>
+              <li key={index}>{item}</li>
             )
           }) : content
         }
-        </div>
+        </ul>
         
       </div>
     );
@@ -36,7 +37,7 @@ const Collapse = ({ title, content }) => { //Cette ligne définit une fonction f
 Collapse.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string.isRequired,
-    content: PropTypes.array,
+    content: PropTypes.array.isRequired,
 }
 
     // Pas open, la classe arrow ne change pas, si collapse open, changer la classe arrow pour pas arrow et donc changer sens fleche
