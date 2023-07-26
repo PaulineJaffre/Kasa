@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client'
 import "./sass/index.css";
 import { BrowserRouter } from "react-router-dom";
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-//import NavBar from "./components/navBar/Navbar";
-//import Footer from "./components/footer/Footer";
 import App from './App';
 
 

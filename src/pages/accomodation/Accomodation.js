@@ -30,7 +30,7 @@ export default function Accomodation() {
 //Les données de l'hébergement, telles que le nom de l'hôte, la note, la description et les équipements, sont extraites de dataCurrentAccomodations et stockées dans des variables distinctes
 
 	if (dataCurrentAccomodations.length === 0) 
-  return <Error />; //renvoie le composant Error pour afficher une page d'erreur.
+		return <Error />; //renvoie le composant Error pour afficher une page d'erreur.
 
 	return (
 		<>
