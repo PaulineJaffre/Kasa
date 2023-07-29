@@ -4,7 +4,6 @@
     color: white;
     border-radius: 5px;
     line-height: 0;
-    padding: 10px 10px 0 10px;
 }
 
 
@@ -22,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 10px 0 10px;
 }
 
 .descriptionCollapse {
@@ -29,6 +29,10 @@
     line-height: 1.5em;
     text-align: left;
     padding-bottom: 10px;
+    background-color: #F6F6F6;
+    color: #FF6060;
+    padding: 10px 10px 10px 10px;
+    list-style-type: none;
 }
 
 .descriptionCollapse_hidden {

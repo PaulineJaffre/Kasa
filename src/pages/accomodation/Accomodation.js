@@ -13,24 +13,34 @@ export default function Accomodation() {
 
 	const { id } = useParams();	 //récupérer l'ID de l'hébergement à partir de l'URL
 
-	const [imageSlider, setImageSlider] = useState([]); //déclare une variable d'état imageSlider qui sera utilisée pour stocker les images de la galerie.
 	const dataCurrentAccomodations = datas.filter(data => data.id === id); //filtre les données d'hébergement datas pour trouver l'hébergement correspondant à l'ID spécifié. Les données de cet hébergement sont stockées dans la variable dataCurrentAccomodations.
-	
+	const [imageSlider, setImageSlider] = useState([]); //déclare une variable d'état imageSlider qui sera utilisée pour stocker les images de la galerie.
+
 	useEffect(() => {
 		const dataCurrentAccomodations = datas.filter(data => data.id === id);
+		if (dataCurrentAccomodations[0] !== undefined){
 		setImageSlider(dataCurrentAccomodations[0].pictures);
+		}
 	}, [id]); 
-  //mettre à jour la variable d'état imageSlider en fonction de l'ID de l'hébergement passé dans l'URL. Chaque fois que l'ID change, le useEffect est déclenché et il met à jour imageSlider avec les images correspondantes à cet ID.
+	//mettre à jour la variable d'état imageSlider en fonction de l'ID de l'hébergement passé dans l'URL. Chaque fois que l'ID change, le useEffect est déclenché et il met à jour imageSlider avec les images correspondantes à cet ID.
+	
+	
+  console.log(dataCurrentAccomodations[0]);
+  if (dataCurrentAccomodations[0] !== undefined) {
+	
 
-  
+	
+		
+	
+
 	const name = dataCurrentAccomodations[0].host.name.split(' ');
 	const rating = dataCurrentAccomodations[0].rating;
 	const description = dataCurrentAccomodations[0].description;
 	const equipments = dataCurrentAccomodations[0].equipments;
 //Les données de l'hébergement, telles que le nom de l'hôte, la note, la description et les équipements, sont extraites de dataCurrentAccomodations et stockées dans des variables distinctes
+	
 
-	if (dataCurrentAccomodations.length === 0) 
-		return <Error />; //renvoie le composant Error pour afficher une page d'erreur.
+	
 
 	return (
 		<>
@@ -78,4 +88,8 @@ export default function Accomodation() {
 			</main>
 		</>
 	)
+	}					
+	else {
+	return <Error />; //renvoie le composant Error pour afficher une page d'erreur.
+	}
 }
